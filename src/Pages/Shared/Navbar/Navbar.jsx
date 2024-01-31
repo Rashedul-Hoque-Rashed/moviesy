@@ -29,7 +29,7 @@ const Navbar = () => {
     </>
 
     return (
-            <nav className="navbar navbar-light bg-light fixed-top nav-content px-2">
+            <nav className="navbar navbar-light bg-light fixed-top nav-content">
                 <div className="container-fluid">
                     <Link to='/'>
                     <img src={logo} alt="" className="logo"/>
