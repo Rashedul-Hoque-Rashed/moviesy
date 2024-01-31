@@ -1,4 +1,6 @@
 .slider {
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: #01000c;
     display: flex;
     flex-direction: column;
