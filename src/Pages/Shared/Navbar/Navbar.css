@@ -1,0 +1,35 @@
+.nav-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* padding: 10px 20px; */
+}
+
+.nav {
+    color: #39a2d2;
+}
+
+.nav:hover {
+    color: #2e3796;
+}
+
+.nav-active {
+    color: #2e3796;
+}
+
+.logo {
+    width: fit-content;
+    height: 40px;
+}
+
+.canvas-title {
+    background: linear-gradient(to right, #2e3796, #39a2d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.search {
+    background-color: #39a2d2;
+}
+.search:hover {
+    background-color: #2e3796;
+}
