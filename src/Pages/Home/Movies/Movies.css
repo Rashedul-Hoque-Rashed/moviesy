@@ -1,5 +1,16 @@
+.movies{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 16px 10px 16px !important;
+}
 .title{
     background: linear-gradient(to right, #2e3796, #39a2d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.see-more{
+    background-color: #39a2d2;
+}
+.see-more:hover{
+    background-color: #2e3796;
 }
