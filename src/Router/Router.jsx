@@ -5,6 +5,7 @@ import MovieDetails from "../Pages/MovieDetails/MovieDetails";
 import Booking from "../Pages/Booking/Booking";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRouter from "./PrivateRouter";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/booking/:id",
-        element: <Booking />,
+        element: <PrivateRouter><Booking /></PrivateRouter>,
         loader: ({ params }) => fetch(`https://api.tvmaze.com/shows/${params.id}`)
       },
       {
