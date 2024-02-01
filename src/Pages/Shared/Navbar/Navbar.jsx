@@ -1,9 +1,35 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import './Navbar.css'
 import logo from '../../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const Navigate = useNavigate();
 
+    const handelLogOut = () => {
+        logOut()
+            .then(res => {
+                console.log(res);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Log out successful',
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+                Navigate('/');
+            })
+            .catch(err => {
+                Swal.fire({
+                    icon: 'error',
+                    title: `${err.message}`,
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+            })
+    }
 
     const link = <>
         <li className="nav-item">
@@ -25,6 +51,18 @@ const Navbar = () => {
             >
                 Booking List
             </NavLink>
+        </li>
+        <li className="nav-item mt-1">
+            {
+                user ? <button onClick={handelLogOut} className="btn fs-5 fw-bold link-underline link-underline-opacity-0 nav border-0 bg-none">Log out</button> : <NavLink
+                to="/login"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "fs-5 fw-bold link-underline link-underline-opacity-0 nav-active" : "fs-5 fw-bold link-underline link-underline-opacity-0 nav"
+                }
+            >
+                Login
+            </NavLink>
+            }
         </li>
     </>
 
