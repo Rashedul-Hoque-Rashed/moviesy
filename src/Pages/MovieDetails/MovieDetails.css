@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 70px;
+    min-height: 100vh;
 }
 
 .rating {
@@ -10,10 +11,6 @@
     border-radius: 10px;
     color: white;
     padding: 4px 10px;
-}
-
-.booking {
-    background-color: #39a2d2;
 }
 
 .booking:hover {

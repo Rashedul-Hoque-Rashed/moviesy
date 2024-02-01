@@ -25,7 +25,7 @@ const MovieDetails = () => {
                         <p className="d-flex flex-row justify-content-start align-items-center gap-2 movie-rating">Rating: <span className="d-flex flex-row justify-content-start align-items-center gap-2 rating"><FaStar /> {movie.rating.average}</span></p>
                     </div>
                     <Link to={`/booking/${movie.id}`}>
-                    <button className="btn text-white fs-6 fw-semibold booking">Booking</button>
+                    <button className="btn text-white fs-6 fw-semibold see-more">Booking</button>
                     </Link>
                 </div>
             </div>
