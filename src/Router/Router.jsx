@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
+import MovieDetails from "../Pages/MovieDetails/MovieDetails";
+import Booking from "../Pages/Booking/Booking";
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +12,17 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
-      }
+      },
+      {
+        path: "/details/:id",
+        element: <MovieDetails />,
+        loader: ({ params }) => fetch(`https://api.tvmaze.com/shows/${params.id}`)
+      },
+      {
+        path: "/booking/:id",
+        element: <Booking />,
+        loader: ({ params }) => fetch(`https://api.tvmaze.com/shows/${params.id}`)
+      },
     ]
   },
 ]);

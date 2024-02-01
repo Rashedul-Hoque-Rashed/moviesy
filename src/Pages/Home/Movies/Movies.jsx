@@ -29,9 +29,9 @@ const Movies = () => {
     return (
         <div className='movies'>
             <h2 className="text-center fs-2 fw-bolder title pt-5 pb-3">New Movies</h2>
-            <div className='row row-cols-lg-3 row-cols-md-2 row-cols-1'>
+            <div className='row row-cols-lg-3 row-cols-md-2 row-cols-1 card-content'>
                 {
-                    data.map(movie => <div key={movie.show?.id} className='col mb-3'>
+                    data.map(movie => <div key={movie.show?.id} className='col mb-5'>
                         <div className="card">
                             <img src={movie?.show?.image?.medium} className="card-img-top" alt="" />
                             <div className="card-body">

@@ -1,0 +1,33 @@
+.movie-details {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* padding: 10px 16px 10px 16px !important; */
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.rating {
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+    padding: 4px 10px;
+}
+
+.booking {
+    background-color: #39a2d2;
+}
+
+.booking:hover {
+    background-color: #2e3796;
+}
+
+.movie-type {
+    border-right: 2px gray solid;
+    height: 50px;
+    padding-right: 10px;
+}
+.movie-rating{
+    border-left: 2px gray solid;
+    height: 50px;
+    padding-left: 10px;
+}
