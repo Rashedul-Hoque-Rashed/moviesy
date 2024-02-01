@@ -84,10 +84,6 @@ const Navbar = () => {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 {link}
                             </ul>
-                            <form className="d-flex mt-3" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn text-white fs-6 fw-semibold search" type="submit">Search</button>
-                            </form>
                         </div>
                     </div>
                 </div>
