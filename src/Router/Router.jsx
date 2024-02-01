@@ -3,6 +3,8 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
 import MovieDetails from "../Pages/MovieDetails/MovieDetails";
 import Booking from "../Pages/Booking/Booking";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ export const router = createBrowserRouter([
         path: "/booking/:id",
         element: <Booking />,
         loader: ({ params }) => fetch(`https://api.tvmaze.com/shows/${params.id}`)
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/register",
+        element: <Register />
       },
     ]
   },
